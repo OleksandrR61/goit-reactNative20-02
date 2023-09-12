@@ -6,15 +6,18 @@ export default InputText = ({
     placeholder,
     keyboardType,
     inputMode,
+    secureTextentry = false,
+    style,
 }) => <TextInput
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
         keyboardType={keyboardType}
         inputMode={inputMode}
-        style={styles.input}
+        secureTextEntry={secureTextentry}
+        style={{...styles.input, ...style}}
         placeholderTextColor={"#BDBDBD"}
-        selectionColor={"#212121"}
+        selectionColor={"#212121"}        
     />;
 
 const styles = StyleSheet.create({
