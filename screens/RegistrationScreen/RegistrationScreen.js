@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Text } from "react-native";
 
-import { Container, FormContainer, InputText } from "../../components";
+import { Container, FormContainer, InputText, InputSecretText } from "../../components";
 
 export default RegistrationScreen = () => {
     const [ avatar, setAvatar ] = useState(null);
@@ -27,6 +27,15 @@ export default RegistrationScreen = () => {
                     placeholder={"Адреса електронної пошти"}
                     keyboardType={"email-address"}
                     inputMode={"email"}
+                />
+
+                <InputSecretText
+                    value={password}
+                    onChangeText={setPassword}
+                    placeholder={"Пароль"}
+                    keyboardType={"default"}
+                    inputMode={"none"}
+                    style={{marginBottom: 43}}
                 />
             </FormContainer>
         </Container>;

@@ -6,7 +6,7 @@ export default InputText = ({
     placeholder,
     keyboardType,
     inputMode,
-    secureTextentry = false,
+    secureTextEntry = false,
     style,
 }) => <TextInput
         value={value}
@@ -14,7 +14,7 @@ export default InputText = ({
         placeholder={placeholder}
         keyboardType={keyboardType}
         inputMode={inputMode}
-        secureTextEntry={secureTextentry}
+        secureTextEntry={secureTextEntry}
         style={{...styles.input, ...style}}
         placeholderTextColor={"#BDBDBD"}
         selectionColor={"#212121"}        
