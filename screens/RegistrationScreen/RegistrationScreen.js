@@ -1,13 +1,24 @@
-import { useState } from "react";
-import { Text } from "react-native";
+import { useState, useEffect } from "react";
 
-import { Container, FormContainer, InputText, InputSecretText } from "../../components";
+import {
+    Container,
+    FormContainer,
+    InputText,
+    InputSecretText,
+    ButtonPrimary,
+} from "../../components";
 
 export default RegistrationScreen = () => {
     const [ avatar, setAvatar ] = useState(null);
     const [ login, setLogin ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [ isReady, setIsReady ] = useState(false);
+    const [ isLoading, setIsLoading ] = useState(false);
+
+    useEffect(() => {
+        setIsReady(avatar && login && email && password)
+    }, [avatar, login, email, password]);
 
     return <Container>
             <FormContainer
@@ -36,6 +47,12 @@ export default RegistrationScreen = () => {
                     keyboardType={"default"}
                     inputMode={"none"}
                     style={{marginBottom: 43}}
+                />
+
+                <ButtonPrimary
+                    title={isLoading ? "Очікуйте..." : "Зареєстуватися"}
+                    isReady={isReady}
+                    style={{marginBottom: 16}}
                 />
             </FormContainer>
         </Container>;
