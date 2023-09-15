@@ -6,17 +6,18 @@ export default ButtonPrimary = ({isReady = true, title, onPress, style}) => <Tou
                 ...styles.container,
                 backgroundColor: isReady ? "#FF6C00" : "#F6F6F6",
                 ...style,
-        }}
-    >
-        <Text
-            style={{
-                ...styles.title,
-                color: isReady ? "#FFFFFF" : "#BDBDBD",
             }}
+            disabled={!isReady}
         >
-            {title}                
-        </Text>
-    </TouchableOpacity>;
+            <Text
+                style={{
+                    ...styles.title,
+                    color: isReady ? "#FFFFFF" : "#BDBDBD",
+                }}
+            >
+                {title}                
+            </Text>
+        </TouchableOpacity>;
 
 const styles = StyleSheet.create({
     container: {

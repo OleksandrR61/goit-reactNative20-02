@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 
-import { RegistrationScreen } from './screens';
+import { RegistrationScreen, LoginScreen } from './screens';
 import { Container } from './components';
 
 export default function App() {
@@ -16,7 +16,8 @@ export default function App() {
 
   return (
     <>
-      <RegistrationScreen />
+      {/* <RegistrationScreen /> */}
+      <LoginScreen />
       <StatusBar style="auto" />
     </>
   );

@@ -7,6 +7,7 @@ import {
     InputSecretText,
     ButtonPrimary,
     ButtonSecondary,
+    ImputImage,
 } from "../../components";
 
 export default RegistrationScreen = () => {
@@ -60,6 +61,11 @@ export default RegistrationScreen = () => {
                     text={"Вже є акаунт? "}
                     textButton={"Увійти"}
                     onPress={() => {}}
+                />
+
+                <ImputImage
+                    image={avatar}
+                    onPress={image => setAvatar(image)}
                 />
             </FormContainer>
         </Container>;

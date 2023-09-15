@@ -1,7 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default FormContainer = ({children, title}) => <View
-        style={styles.container}
+export default FormContainer = ({children, title, style}) => <View
+        style={{
+            ...styles.container,
+            ...style,
+        }}
     >
         <Text
             style={styles.title}

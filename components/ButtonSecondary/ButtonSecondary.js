@@ -3,14 +3,18 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 export default ButtonSecondary = ({text, textButton, onPress}) => <View
         style={styles.container}
     >
-        <Text>
+        <Text
+            style={styles.text}
+        >
             {text}
         </Text>
 
         <TouchableOpacity
             onPress={onPress}
         >
-            <Text>
+            <Text
+                style={styles.textButton}
+            >
                 {textButton}
             </Text>
         </TouchableOpacity>
@@ -18,6 +22,23 @@ export default ButtonSecondary = ({text, textButton, onPress}) => <View
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexDirection: "row",
+        alignSelf: "center",      
+    },
+    text: {
+        fontFamily: "Roboto-Regular",
+        fontWeight: "400",
+        fontSize: 16,
+        lineHeight: 18.75,
+        color: "#1B4371",
+    },
+
+    textButton: {
+        fontFamily: "Roboto-Regular",
+        fontWeight: "400",
+        fontSize: 16,
+        lineHeight: 18.75,
+        textDecorationLine: "underline",
+        color: "#1B4371",
     },
 })
