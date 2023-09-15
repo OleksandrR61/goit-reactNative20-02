@@ -6,6 +6,7 @@ import {
     InputText,
     InputSecretText,
     ButtonPrimary,
+    ButtonSecondary,
 } from "../../components";
 
 export default RegistrationScreen = () => {
@@ -29,7 +30,7 @@ export default RegistrationScreen = () => {
                     onChangeText={setLogin}
                     placeholder={"Логін"}
                     keyboardType={"default"}
-                    inputMode={"none"}
+                    inputMode={"text"}
                 />
 
                 <InputText
@@ -45,7 +46,7 @@ export default RegistrationScreen = () => {
                     onChangeText={setPassword}
                     placeholder={"Пароль"}
                     keyboardType={"default"}
-                    inputMode={"none"}
+                    inputMode={"text"}
                     style={{marginBottom: 43}}
                 />
 
@@ -53,6 +54,12 @@ export default RegistrationScreen = () => {
                     title={isLoading ? "Очікуйте..." : "Зареєстуватися"}
                     isReady={isReady}
                     style={{marginBottom: 16}}
+                />
+
+                <ButtonSecondary
+                    text={"Вже є акаунт? "}
+                    textButton={"Увійти"}
+                    onPress={() => {}}
                 />
             </FormContainer>
         </Container>;
